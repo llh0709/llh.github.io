@@ -4,22 +4,21 @@
     <meta charset="utf-8">
     <title>个人官网</title>
     <style>
-        /* 全局清除默认边距，让视频铺满全屏 */
+        /* 全局清除默认边距 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* 视频全屏固定背景 */
-        video {
-            position: fixed; /* 固定在屏幕 */
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            object-fit: fill;
+        /* ✅ ✅ ✅ GIF 全屏背景核心代码（GitHub 可用） */
+        body {
+            background-image: url("11.gif"); /* 你的 GIF 文件名 */
+            background-size: 100% 100%;         /* 铺满屏幕 */
+            background-position: center;    /* 居中 */
+            background-attachment: fixed;   /* 固定不动 */
+            background-repeat: no-repeat;   /* 不重复 */
+            background-color: #000;         /* 兜底黑色 */
         }
 
         h1 {
@@ -28,7 +27,6 @@
     text-shadow: 0 0 8px #ffff00, 0 0 12px #ffff00;
     text-align: center;
     letter-spacing: 4px;
-    /* 🔥 这就是你要的：古风 + 签名 + 倾斜 完美字体 */
     font-family: "STKaiti", "KaiTi", "SimSun", serif;
     font-style: italic;
     font-weight: 700;
@@ -48,8 +46,6 @@
             text-align: center;
             letter-spacing: 4px;
             font-family:"STCcaiyun","STFangsong",sursive;
-            
-            /* 竖排文字固定在左侧 */
             position: fixed;
             left: 30px;
             top: 50px;
@@ -58,14 +54,12 @@
         h4 {
             font-size: 30px;
             color: #fff;
-            
-            /* 固定在右上角 */
             position: fixed;
             right: 35px;
             top: 50px;
         }
 
-        /* 以下全是新增，不修改你原有样式 */
+        /* 导航在标题下方 */
         .container {
             text-align: center;
             margin-top: 30px;
@@ -97,19 +91,16 @@
 </head>
 
 <body>
-    <video src="./11.mp4" autoplay muted loop playsinline></video>
-    
     <h1>三国谋定天下</h1>
 	<hr>
     
-    <!-- 导航 + 版权 全部放在标题下面 -->
     <div class="container">
         <div class="school-nav">
             <a href="#">首页</a>
             <a href="#">三谋智障榜</a>
-            <a href="#">联系始皇</a>
+            <a href="#">汉奸榜</a>
             <a href="#">翊团招人</a>
-            <a href="#"></a>
+            <a href="#">联系始皇</a>
         </div>
         <div class="school-footer">
             三国谋定天下 秦始皇 © 版权所有 | 官方网站
@@ -117,6 +108,5 @@
     </div>
 
    
- 
 </body>
 </html>
