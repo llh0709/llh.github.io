@@ -1,134 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <title>三谋狂魔哥</title>
+    <meta charset="utf-8">
+    <title>个人官网</title>
     <style>
-        /* 全局样式重置和基础设置 */
+        /* 全局清除默认边距，让视频铺满全屏 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
         }
 
-        /* 页面背景和整体布局 */
-        body {
-            background-color: #f8f9fa;
-            padding: 20px;
-            line-height: 1.6;
+        /* 视频全屏固定背景 */
+        video {
+            position: fixed; /* 固定在屏幕 */
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            object-fit: fill;
         }
 
-        /* 标题样式优化 */
-        .main-title {
-            font-size: 50px;
+        h1 {
+    font-size: 80px;
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffff00, 0 0 12px #ffff00;
+    text-align: center;
+    letter-spacing: 4px;
+    /* 🔥 这就是你要的：古风 + 签名 + 倾斜 完美字体 */
+    font-family: "STKaiti", "KaiTi", "SimSun", serif;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 4px;
+}
+        .gufeng2 {
+            font-family: "SimSun", "宋体", serif;
+            font-size: 45px;
+            color: #ece911;
+            letter-spacing: 3px;
+        }
+        h3 {
+            writing-mode: vertical-rl;
+            font-size: 80px;
+            color: #ffffff;
+            text-shadow: 0 0 8px #ffff7f, 0 0 12px #ff0000;
             text-align: center;
-            color: #2c3e50;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
+            letter-spacing: 4px;
+            font-family:"STCcaiyun","STFangsong",sursive;
+            
+            /* 竖排文字固定在左侧 */
+            position: fixed;
+            left: 30px;
+            top: 50px;
         }
 
-        .sub-title1 {
-            color: #3498db;
-            text-align: center;
-            font-size: 28px;
-            margin: 15px 0;
-        }
-
-        .warning-text {
-            color: #e74c3c;
-            text-align: center;
+        h4 {
             font-size: 30px;
-            font-weight: bold;
-            animation: blink 1s infinite alternate;
-            margin: 20px 0;
+            color: #fff;
+            
+            /* 固定在右上角 */
+            position: fixed;
+            right: 35px;
+            top: 50px;
         }
 
-        /* 分割线样式优化 */
-        hr {
-            border: none;
-            height: 3px;
-            background: linear-gradient(to right, #3498db, #e74c3c);
-            width: 80%;
-            margin: 30px auto;
-        }
-
-        /* 核心：图片+文字的弹性布局容器 */
-        .img-text-container {
-            display: flex;
-            align-items: center; /* 垂直居中对齐 */
-            justify-content: center; /* 水平居中 */
-            gap: 30px; /* 文字和图片之间的间距 */
-            margin: 20px auto;
-            width: 90%; /* 容器宽度，适配屏幕 */
-            flex-wrap: wrap; /* 小屏幕自动换行，避免挤压 */
-        }
-
-        /* 左右侧文字样式 */
-        .img-side-text {
-            font-size: 24px;
-            color: #2c3e50;
-            font-weight: bold;
-            text-align: center; /* 文字居中 */
-            /* 限制文字宽度，避免过长 */
-            max-width: 200px;
-        }
-
-        /* 图片样式优化 */
-        .main-img {
-            width: 800px;
-            max-width: 90%; /* 小屏幕适配 */
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .main-img:hover {
-            transform: scale(1.02);
-        }
-
-        /* 音频控件样式 */
-        audio {
-            display: block;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 600px;
-        }
-
-        /* 送葬曲文字样式 */
-        .music-title {
+        /* 以下全是新增，不修改你原有样式 */
+        .container {
             text-align: center;
-            font-size: 24px;
-            color: #8e44ad;
-            margin: 15px 0 30px 0;
-            font-style: italic;
+            margin-top: 30px;
         }
-
-        /* 闪烁动画定义 */
-        @keyframes blink {
-            from { opacity: 1; }
-            to { opacity: 0.7; }
+        .school-nav {
+            display: inline-flex;
+            gap: 40px;
+            background: rgba(255,255,255,0.85);
+            padding: 12px 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .school-nav a {
+            font-size: 18px;
+            color: #222;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .school-nav a:hover {
+            color: #c00;
+        }
+        .school-footer {
+            color: #fff;
+            font-size: 15px;
+            margin-top: 20px;
+            text-shadow: 0 0 5px #000;
         }
     </style>
 </head>
-<body> 
-    <h1 class="main-title">三谋狂魔哥云梦盟主子墨</h1> 
-    <h2 class="sub-title1">由三谋秦始皇制作</h2>
-    <h2 class="warning-text">三谋狂魔哥编号11211056963避雷！避雷！避雷！</h2>
-    <hr>
+
+<body>
+    <video src="11.MP4" autoplay muted loop playsinline></video>
     
-    <!-- 图片+左右文字容器 -->
-    <div class="img-text-container">
-        <!-- 左侧文字 -->
-        <div class="img-side-text">背刺成瘾 垃圾不如</div>
-        <!-- 图片 -->
-        <img src="1.jpg" class="main-img" title="臭名昭著背刺犬" alt="相关图片">
-        <!-- 右侧文字 -->
-        <div class="img-side-text">避坑避雷 远离此人</div>
+    <h1>三国谋定天下</h1>
+	<hr>
+    
+    <!-- 导航 + 版权 全部放在标题下面 -->
+    <div class="container">
+        <div class="school-nav">
+            <a href="#">首页</a>
+            <a href="#">三谋智障榜</a>
+            <a href="#">联系始皇</a>
+            <a href="#">翊团招人</a>
+            <a href="#"></a>
+        </div>
+        <div class="school-footer">
+            三国谋定天下 秦始皇 © 版权所有 | 官方网站
+        </div>
     </div>
 
-    <audio src="2.mp3" controls loop></audio>
-    <h3 class="music-title">送葬曲</h3>
-    <h3 class="warning-text">臭名昭著背刺犬</h3>
+   
+ 
 </body>
 </html>
