@@ -11,27 +11,30 @@
             box-sizing: border-box;
         }
 
-        /* ✅ ✅ ✅ GIF 全屏背景核心代码（GitHub 可用） */
+        /* GIF 全屏背景核心代码 */
         body {
             background-image: url("https://img.cdn1.vip/i/69ef7f7b361cf_1777303419.webp");
-            background-size: 100% 100%;         /* 铺满屏幕 */
-            background-position: center;    /* 居中 */
-            background-attachment: fixed;   /* 固定不动 */
-            background-repeat: no-repeat;   /* 不重复 */
-            background-color: #000;         /* 兜底黑色 */
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #000;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 150px;
         }
 
         h1 {
-    font-size: 80px;
-    color: #ffffff;
-    text-shadow: 0 0 8px #ffff00, 0 0 12px #ffff00;
-    text-align: center;
-    letter-spacing: 4px;
-    font-family: "STKaiti", "KaiTi", "SimSun", serif;
-    font-style: italic;
-    font-weight: 700;
-    margin-top: 4px;
-}
+            font-size: 80px;
+            color: #ffffff;
+            text-shadow: 0 0 8px #ffff00, 0 0 12px #ffff00;
+            text-align: center;
+            letter-spacing: 4px;
+            font-family: "STKaiti", "KaiTi", "SimSun", serif;
+            font-style: italic;
+            font-weight: 700;
+            margin-top: 4px;
+        }
         .gufeng2 {
             font-family: "SimSun", "宋体", serif;
             font-size: 45px;
@@ -45,7 +48,7 @@
             text-shadow: 0 0 8px #ffff7f, 0 0 12px #ff0000;
             text-align: center;
             letter-spacing: 4px;
-            font-family:"STCcaiyun","STFangsong",sursive;
+            font-family:"STCcaiyun","STFangsong",cursive;
             position: fixed;
             left: 30px;
             top: 50px;
@@ -81,11 +84,28 @@
         .school-nav a:hover {
             color: #c00;
         }
+
+        /* 底部：文字 + 图片 同行显示 */
+        .bottom-content {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px; /* 文字和图片之间的间距 */
+        }
         .school-footer {
             color: #fff;
             font-size: 15px;
-            margin-top: 20px;
             text-shadow: 0 0 5px #000;
+        }
+        .bottom-content img {
+            width: 60px; /* 调整图片大小，避免太大 */
+            height: 60px;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -97,16 +117,18 @@
     <div class="container">
         <div class="school-nav">
             <a href="#">首页</a>
-            <a href="2..html">三谋文勋榜</a>
+            <a href="#">三谋智障榜</a>
             <a href="#">汉奸榜</a>
             <a href="#">翊团招人</a>
             <a href="#">联系始皇</a>
         </div>
-        <div class="school-footer">
-            三国谋定天下 秦始皇 © 版权所有 | 官方网站
-        </div>
     </div>
 
+    <!-- 文字在前，图片在后 -->
+    <div class="bottom-content">
+        <div class="school-footer">三国谋定天下 秦始皇 © 版权所有 | 官方网站</div>
+        <img src="333.png">
+    </div>
    
 </body>
 </html>
